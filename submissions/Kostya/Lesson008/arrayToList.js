@@ -55,19 +55,19 @@ console.log(prepend(10, prepend(20, prepend(30, null))));
 
 
 let nth = (list, number) =>{
-    let value;
-    function recurs (number){
        if (number > 0){
            number --;
+          if (list['rest'] == null && number >= 0) {
+              return undefined;};
            list = list ['rest'];
-           return recurs(number);
+           return nth(list, number);
        }
        return list['value'];
     }
 
-    return  recurs(number);
-}
-console.log(nth(arrayToList([10, 20, 30]), 1));
+
+
+console.log(nth(arrayToList([10, 20, 30]), 2));
 // //
 // // // console.log(arrayToList([10, 20, 30]));
 // // // → {value: 10, rest: {value: 20, rest: null}}
