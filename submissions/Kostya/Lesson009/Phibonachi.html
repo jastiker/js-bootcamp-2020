@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Phibonachi</title>
+</head>
+<body>
+
+
+<form name="number">
+    <input type="text" name="key"></input>
+    <input type="button" name="send" value="Получить"/>
+</form>
+<p id="resultClick"></p>
+
+<script>
+    const phibonachi = (n) => {
+        if (n === 1){
+            console.log(n)
+            return document.getElementById("resultClick").innerHTML = `0`;
+        }
+        const func = () => {
+            let count = 0;
+            let result = 0;
+            let result0 = 0;
+            return function recurse() {
+                if (count < n) {
+                    count++;
+                    result += result0
+                        console.log(count);
+                    return recurse();
+                } else return document.getElementById("resultClick").innerHTML = `${count}`;
+            }
+        }
+    }
+    var n = document.number.key;
+    var sendButton = document.number.send;
+    sendButton.addEventListener("click", phibonachi(n));
+</script>
+
+</body>
+</html>
+
