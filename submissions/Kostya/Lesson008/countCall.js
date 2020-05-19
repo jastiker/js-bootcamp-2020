@@ -1,11 +1,10 @@
-
-const func = () =>{
-    let count = 0;
-    return function () {
-        console.log(count);
-        return count++;
-    }
-}
+const func = () => {
+  let count = 0;
+  return function () {
+    console.log(count);
+    return count++;
+  };
+};
 
 let counter1 = func();
 
