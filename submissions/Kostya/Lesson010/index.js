@@ -49,23 +49,20 @@ const fibonachi = (n) => {
 let text = document.getElementById('numberN');
 
 const makeButton = () => {
-  document
-    .getElementById('addButton')
-    .insertAdjacentHTML(
-      'beforebegin',
-      '<p><input type="button" onclick="counter1()" name="addButton" id="butt" value="Count" /><p>',
-    );
+  let button = document.createElement('input');
+  // type="button" onclick="counter1()" name="addButton" id="butt" value="Count"
+  button.type = 'button';
+  button.value = 'Count+';
+  button.onclick = counter();
+  document.getElementById('addButton').append(button);
 };
-const counter1 = () => {
-  let func = counter();
-  return func();
-};
+
 const counter = () => {
   let count = 0;
   return function () {
     count++;
-    console.log(count);
-    return document.innerHTML('afterbegin', '<h2> count</h2>');
+    alert(count);
+    return document.button.innerHTML('afterbegin', '<h2> count</h2>');
   };
 };
 
