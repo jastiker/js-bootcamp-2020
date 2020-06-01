@@ -12,3 +12,22 @@ const concatArray = function (arr) {
   });
   return (document.getElementById('result').innerHTML = `${arrAll}`);
 };
+
+const arrEvery1 = [NaN, NaN, NaN];
+const arrEvery2 = [NaN, NaN, 4];
+const arrSome1 = [NaN, 3, 4];
+const arrSome2 = [2, 3, 4];
+const every = (arr, arg) => {
+  return (document.getElementById('resultEvery').innerHTML = arr.every(arg));
+};
+const some = (arr, arg) => {
+  return (document.getElementById('resultSome').innerHTML = arr.some(arg));
+};
+// console.log(every([NaN, NaN, NaN], isNaN));
+// // → true
+// console.log(every([NaN, NaN, 4], isNaN));
+// // → false
+// console.log(some([NaN, 3, 4], isNaN));
+// // → true
+// console.log(some([2, 3, 4], isNaN));
+// // → false
