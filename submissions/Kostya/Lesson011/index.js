@@ -17,12 +17,15 @@ const arrEvery1 = [NaN, NaN, NaN];
 const arrEvery2 = [NaN, NaN, 4];
 const arrSome1 = [NaN, 3, 4];
 const arrSome2 = [2, 3, 4];
-const every = (arr, arg) => {
+const every = (arr, arg, th) => {
+  th.disabled = true;
   return (document.getElementById('resultEvery').innerHTML = arr.every(arg));
 };
-const some = (arr, arg) => {
+const some = (arr, arg, th) => {
+  th.disabled = true;
   return (document.getElementById('resultSome').innerHTML = arr.some(arg));
 };
+
 // console.log(every([NaN, NaN, NaN], isNaN));
 // // → true
 // console.log(every([NaN, NaN, 4], isNaN));
